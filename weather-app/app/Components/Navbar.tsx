@@ -5,9 +5,12 @@ import { github } from '../utils/icons';
 import { Button } from '@/components/ui/button';
 import ThemeDropDown from './ThemeDropDown/ThemeDropDown';
 import SearchDialog from './SearchDialog/SearchDialog';
+import { useGlobalContext } from '../context/globalContext';
+import { CloudCog } from 'lucide-react';
 
 function Navbar() {
   const router = useRouter();
+  const {state} = useGlobalContext();
   
   return (
     <div className='w-full py-4 flex items-center justify-between'>
